@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFonts));
             this.textBoxInput = new System.Windows.Forms.RichTextBox();
             this.btnRandomize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.textBoxWelcome = new System.Windows.Forms.RichTextBox();
             this.btnRecover = new System.Windows.Forms.Button();
+            this.textBoxError = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // textBoxInput
@@ -109,10 +111,26 @@
             this.btnRecover.UseVisualStyleBackColor = true;
             this.btnRecover.Click += new System.EventHandler(this.btnRecover_Click);
             // 
+            // textBoxError
+            // 
+            this.textBoxError.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxError.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxError.Enabled = false;
+            this.textBoxError.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxError.ForeColor = System.Drawing.Color.Red;
+            this.textBoxError.Location = new System.Drawing.Point(193, 703);
+            this.textBoxError.MaxLength = 120;
+            this.textBoxError.Name = "textBoxError";
+            this.textBoxError.Size = new System.Drawing.Size(372, 68);
+            this.textBoxError.TabIndex = 6;
+            this.textBoxError.Text = "";
+            this.textBoxError.TextChanged += new System.EventHandler(this.textBoxError_TextChanged);
+            // 
             // FormFonts
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(908, 800);
+            this.Controls.Add(this.textBoxError);
             this.Controls.Add(this.btnRecover);
             this.Controls.Add(this.textBoxWelcome);
             this.Controls.Add(this.btnReset);
@@ -120,6 +138,7 @@
             this.Controls.Add(this.btnRandomize);
             this.Controls.Add(this.textBoxInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FormFonts";
             this.Opacity = 0.98D;
@@ -137,6 +156,7 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.RichTextBox textBoxWelcome;
         private System.Windows.Forms.Button btnRecover;
+        private System.Windows.Forms.RichTextBox textBoxError;
     }
 }
 
